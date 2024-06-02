@@ -7,7 +7,7 @@ To swap the characters in the array itself, you need to pass the array and the i
 
 Here's your original code with comments highlighting the issue
 
-
+```
 // This swap method swaps only the local copies of ch and ch2
     public void swap(char ch, char ch2) {
         char temp = ch;
