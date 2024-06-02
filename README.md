@@ -96,7 +96,8 @@ class Solution
                 @Override
                 public int compare(pair s1, pair s2)
                 {
-                    return s1.second - s2.second;
+                    return s1.second - s2.second;   //return Integer.compare(m1.end, m2.end);
+
                 }
         });
 ```
