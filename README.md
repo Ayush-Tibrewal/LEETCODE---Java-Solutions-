@@ -100,4 +100,16 @@ class Solution
 
                 }
         });
+
 ```
+# the comaprable that if one second number in equal then compare with the first one 
+```
+Arrays.sort(meetings, new Comparator<Pair>() {
+            public int compare(Pair m1, Pair m2) {
+                if (m1.end != m2.end) {
+                    return Integer.compare(m1.end, m2.end);
+                } else {
+                    return Integer.compare(m1.start, m2.start);
+                }
+            }
+        });
