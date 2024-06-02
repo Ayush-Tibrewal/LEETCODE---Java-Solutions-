@@ -63,6 +63,7 @@ public class solve{
     static double fractionalKnapsack(int W, Item arr[], int n) {
         Arrays.sort(arr, new itemComparator());
 ```
+# other way of writing the comprator class this is for ascending order 
 ```
 class pair 
 {
@@ -73,6 +74,7 @@ class pair
     this.second = finish;
   }
 }
+
 
 class Solution 
 {
