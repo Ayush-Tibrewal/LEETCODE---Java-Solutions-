@@ -22,4 +22,45 @@ public void swap(char[] s, int i, int j) {
     }
 }
 ```
+# sorting in 2d matrix 
+Ascending Order: (a, b) -> a[1] - b[1]
+
+If a[1] is less than b[1], a comes before b.
+If a[1] is greater than b[1], a comes after b.
+Descending Order: (a, b) -> b[1] - a[1]
+
+If b[1] is less than a[1], a comes before b.
+If b[1] is greater than a[1], a comes after b.
+
+```
+// it will sort according to the 1st index 
+Arrays.sort(B, (a, b) -> a[1] - b[1]);
+```
+#comprator 
+decscentding
+```
+class Item {
+  int value, weight;
+  Item(int x, int y) {
+    this.value = x;
+    this.weight = y;
+  }
+}
+
+class itemComparator implements Comparator<Item>
+{
+    @Override
+    public int compare(Item a, Item b) 
+    {
+        double r1 = (double)(a.value) / (double)(a.weight); 
+        double r2 = (double)(b.value) / (double)(b.weight); 
+        if(r1 < r2) return 1; 
+        else if(r1 > r2) return -1; 
+        else return 0; 
+    }
+}
+public class solve{
+    static double fractionalKnapsack(int W, Item arr[], int n) {
+        Arrays.sort(arr, new itemComparator());
+```
 
