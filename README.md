@@ -114,7 +114,8 @@ Arrays.sort(meetings, new Comparator<Pair>() {
             }
         });
 ```
-#how to write arraylist and return in array 
+
+# how to write arraylist and return in array 
 ```
 ArrayList<int[]> arr = new ArrayList<>();
         int n = intervals.length;
