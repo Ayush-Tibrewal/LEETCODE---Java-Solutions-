@@ -113,3 +113,14 @@ Arrays.sort(meetings, new Comparator<Pair>() {
                 }
             }
         });
+```
+#how to write arraylist and return in array 
+```
+ArrayList<int[]> arr = new ArrayList<>();
+        int n = intervals.length;
+arr.add(intervals[i]);
+ int[][] ayush = new int[arr.size()][];
+        return arr.toArray(ayush);
+      //  return result.toArray(new int[result.size()][]);
+```
+
