@@ -124,4 +124,13 @@ arr.add(intervals[i]);
         return arr.toArray(ayush);
       //  return result.toArray(new int[result.size()][]);
 ```
+# counting of the bumber using hashnodes 
+```
+HashMap<Character, Integer> charCount = new HashMap<>();
+    char[] chars = s.toCharArray();
+
+    for (int i = 0; i < chars.length; i++) {
+      charCount.put(chars[i], charCount.getOrDefault(chars[i], 0) + 1);
+    }
+```
 
