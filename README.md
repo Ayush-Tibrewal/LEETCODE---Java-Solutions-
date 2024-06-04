@@ -132,5 +132,9 @@ HashMap<Character, Integer> charCount = new HashMap<>();
     for (int i = 0; i < chars.length; i++) {
       charCount.put(chars[i], charCount.getOrDefault(chars[i], 0) + 1);
     }
+
+for (var entry : charCount.entrySet()) {
+      if (entry.getValue() % 2 == 0) {
+
 ```
 
