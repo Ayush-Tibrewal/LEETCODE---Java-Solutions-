@@ -148,4 +148,5 @@ public int[] count(int[] string){
         return ap;
     }
 ```
+The line String s = String.valueOf(c); is used to convert a char variable c into a String object s
 
