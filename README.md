@@ -137,4 +137,15 @@ for (var entry : charCount.entrySet()) {
       if (entry.getValue() % 2 == 0) {
 
 ```
+STRING CHARACTER COUNT WITHOUT HASHMAP
+```
+public int[] count(int[] string){
+        int[] ap = new int[26];
+        int[] st = string.toCharArray();
+        for(int i =0;i<st.length;i++){
+             ap[st[i]-'a']++;
+        }
+        return ap;
+    }
+```
 
