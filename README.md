@@ -167,4 +167,12 @@ PriorityQueue<Integer> ayush = new PriorityQueue<>((a, b) -> a - b);
 
 
 ```
-
+## spilit string in the dilemiter for example want to split the sentence - my name is ayush 
+```
+String[] words = sentence.split(" ");
+```
+## list 
+```
+ for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+```
