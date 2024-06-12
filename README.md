@@ -161,6 +161,7 @@ PriorityQueue<Integer> ayush = new PriorityQueue<>((a, b) -> a - b);
        for(int i = 0 ; i<hand.length;i++){
         ayush.add(hand[i]);
        }
+       int value = ayush.poll();
 
 //DECS
 PriorityQueue<Integer> ayush = new PriorityQueue<>((a, b) -> a - b);
