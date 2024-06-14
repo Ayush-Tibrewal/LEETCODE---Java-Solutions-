@@ -135,7 +135,8 @@ HashMap<Character, Integer> charCount = new HashMap<>();
 
 for (var entry : charCount.entrySet()) {
       if (entry.getValue() % 2 == 0) {
-
+//to get the value of the particular key 
+Integer value = ayush.get(key);
 ```
 STRING CHARACTER COUNT WITHOUT HASHMAP
 ```
