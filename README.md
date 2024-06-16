@@ -255,3 +255,7 @@ class Node {
 }
 
 ```
+#If there are multiple strings with the same length, return the lexicographically smallest one 
+```
+a[i].length == longest.length()&& a[i].compareTo(longest)<0
+```
