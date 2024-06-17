@@ -152,7 +152,7 @@ public int[] count(int[] string){
 The line String s = String.valueOf(c); is used to convert a char variable c into a String object s
 
 
-#priority queue
+# priority queue
 ```
 // AESC
   PriorityQueue<Integer> ayush = new PriorityQueue<>();
