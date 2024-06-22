@@ -260,7 +260,7 @@ class Node {
 }
 
 // TRIE 2nd type
-```
+
 package TrieDS;
 
 class Trie2 {
@@ -361,13 +361,16 @@ class Trie2 {
         node.deleteend();
     }
 }
-
 ```
 
-```
+
+
 #If there are multiple strings with the same length, return the lexicographically smallest one 
 ```
 a[i].length == longest.length()&& a[i].compareTo(longest)<0
+// use this instead of if else 
+condition ? value_if_true : value_if_false
+// adding the word in the hashset will take logn time complexicity 
 ```
 
-a
+
