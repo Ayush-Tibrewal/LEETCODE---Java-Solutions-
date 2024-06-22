@@ -180,6 +180,9 @@ String[] words = sentence.split(" ");
  for (int i = 0; i < list.size(); i++) {
             System.out.println(list.get(i));
 ```
+//    Check: containsKey('c') - No node for 'c'.
+//    Create: put('c', new Node()) - Create and link a new node for 'c'.
+//    Move: node = node.get('c') - Retrieve the node for 'c' and move to it
 #TRIE 
 ```
 package TrieDS;
@@ -255,6 +258,111 @@ class Node {
         return true;
     }
 }
+
+// TRIE 2nd type
+```
+package TrieDS;
+
+class Trie2 {
+
+    class Node {
+        private Node[] links;
+        int cp, ew;
+
+        Node() {
+            links = new Node[26];
+            cp = 0; // count prefix
+            ew = 0; // end word
+        }
+
+        boolean containsKey(char c) {
+            return links[c - 'a'] != null;
+        }
+
+        void put(char c, Node node) {
+            links[c - 'a'] = node;
+        }
+
+        void increasePrefix() {
+            cp++;
+        }
+
+        void increaseEnd() {
+            ew++;
+        }
+
+        void deleteend() {
+            ew--;
+        }
+
+        void reducePrefix() {
+            cp--;
+        }
+
+        Node get(char ch) {
+            return links[ch - 'a'];
+        }
+
+
+    }
+
+    private Node root;
+
+    Trie2() {
+        root = new Node();
+    }
+
+    void insert(String word) {
+        Node node = root;
+        for (int i = 0; i < word.length(); i++) {
+            if (!node.containsKey(word.charAt(i))) {
+                node.put(word.charAt(i), new Node());
+            }
+            node = node.get(word.charAt(i));
+            node.increasePrefix();
+        }
+        node.increaseEnd();
+    }
+
+    int coutword(String word) {
+        Node node = root;
+        for (int i = 0; i < word.length(); i++) {
+            if (node.containsKey(word.charAt(i))) {
+                node = node.get(word.charAt(i));
+            } else {
+                return 0;
+            }
+        }
+        return node.ew;
+    }
+
+    int countWordsStartingWith(String word) {
+        Node node = root;
+        for (int i = 0; i < word.length(); i++) {
+            if (node.containsKey(word.charAt(i))) {
+                node = node.get(word.charAt(i));
+            } else {
+                return 0;
+            }
+        }
+        return node.cp;
+    }
+
+    void erase(String word) {
+        Node node = root;
+        for (int i = 0; i < word.length(); i++) {
+            if (node.containsKey(word.charAt(i))) {
+                node = node.get(word.charAt(i));
+                node.reducePrefix();
+            } else {
+                return;
+            }
+        }
+        node.deleteend();
+    }
+}
+
+```
 
 ```
 #If there are multiple strings with the same length, return the lexicographically smallest one 
