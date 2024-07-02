@@ -137,7 +137,15 @@ for (var entry : charCount.entrySet()) {
       if (entry.getValue() % 2 == 0) {
 //to get the value of the particular key 
 Integer value = ayush.get(key);
+
+map.remove("Banana", 20); // Removes "Banana" only if its value is 20
+map.replace("Banana", 50); // Updates "Banana" to 50 only if "Banana" exists
+map.clear(); // Removes all key-value pairs
+if (map.containsKey("Banana")) {
+    map.put("Banana", 50);
+}
 ```
+
 STRING CHARACTER COUNT WITHOUT HASHMAP
 ```
 public int[] count(int[] string){
@@ -412,6 +420,16 @@ class Trie {
         return maxNum; 
     }
 };
+```
+```
+//converting arraylist into arr whenever you have to returnn answer in array
+   int[] arr = new int[ayush.size()];
+        for(int i =0;i<arr.length ;i++){
+            arr[i]=ayush.get(i);
+        }
+        return arr;
+    }
+}
 ```
 
 
