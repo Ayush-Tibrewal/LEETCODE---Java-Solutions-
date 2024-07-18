@@ -140,7 +140,7 @@ for (var entry : charCount.entrySet()) {
       if (entry.getValue() % 2 == 0) {
 //to get the value of the particular key 
 Integer value = ayush.get(key);
-
+  char key = entry.getKey();
 map.remove("Banana", 20); // Removes "Banana" only if its value is 20
 map.replace("Banana", 50); // Updates "Banana" to 50 only if "Banana" exists
 map.clear(); // Removes all key-value pairs
@@ -154,6 +154,8 @@ if (map.containsKey(nums[i])) {
 } else {
     map.put(nums[i], 1);
 }
+
+
 ```
 
 STRING CHARACTER COUNT WITHOUT HASHMAP
