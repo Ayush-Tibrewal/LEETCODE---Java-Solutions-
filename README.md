@@ -177,15 +177,15 @@ The line String s = String.valueOf(c); is used to convert a char variable c into
 // AESC
   PriorityQueue<Integer> ayush = new PriorityQueue<>();
 or
+min heap
+smaller element at top
 PriorityQueue<Integer> ayush = new PriorityQueue<>((a, b) -> a - b);
 
-       for(int i = 0 ; i<hand.length;i++){
-        ayush.add(hand[i]);
-       }
-       int value = ayush.poll();
+      
 
 //DECS
-PriorityQueue<Integer> ayush = new PriorityQueue<>((a, b) -> a - b);
+biggest element at the top 
+PriorityQueue<Integer> ayush = new PriorityQueue<>((a, b) -> b - a);
 
 
 ```
