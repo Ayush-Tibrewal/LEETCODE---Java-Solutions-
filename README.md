@@ -116,6 +116,15 @@ Arrays.sort(meetings, new Comparator<Pair>() {
                 }
             }
         });
+
+
+PriorityQueue<Pair> pq = new  PriorityQueue<>((a,b)->{
+            if(a.val!=b.val){
+                return a.val-b.val;
+            }else{
+                return  a.index-b.index;
+            }
+            });
 ```
 
 # how to write arraylist and return in array 
