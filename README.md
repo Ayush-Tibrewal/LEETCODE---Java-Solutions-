@@ -135,6 +135,10 @@ arr.add(intervals[i]);
  int[][] ayush = new int[arr.size()][];
         return arr.toArray(ayush);
       //  return result.toArray(new int[result.size()][]);
+
+
+String[] array = {"a", "b", "c"};
+List<String> list = Arrays.asList(array);
 ```
 # counting of the bumber using hashnodes 
 ```
